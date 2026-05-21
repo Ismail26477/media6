@@ -58,70 +58,140 @@ const clients = [
 
 const Clients = memo(() => {
   return (
-    <section className="relative py-16 md:py-20 bg-black">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-black to-black pointer-events-none" />
-      
-      <div className="container">
+    <section className="relative py-16 md:py-20 bg-black overflow-hidden">
+
+      {/* Background Glow */}
+      <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-primary/10 blur-[120px] rounded-full" />
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-orange-500/10 blur-[120px] rounded-full" />
+
+      <div className="container relative z-10">
+
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mb-20 text-center mx-auto"
+          className="max-w-3xl mb-16 md:mb-20 text-center mx-auto"
         >
-          <p className="text-sm uppercase tracking-[0.4em] text-primary mb-8 font-medium">
+          <p className="text-sm uppercase tracking-[0.4em] text-primary mb-6 font-medium">
             ▸ Trusted By Industry Leaders
           </p>
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight">
+
+          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-tight">
             Our <span className="text-primary">Clients</span>
           </h2>
-          <p className="text-lg text-gray-400 mt-6 leading-relaxed">
+
+          <p className="text-base md:text-lg text-gray-400 mt-5 leading-relaxed px-4">
             Proudly partnering with top brands, studios, and organizations across India and beyond
           </p>
         </motion.div>
 
+        {/* Main Box */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
-          className="bg-transparent border border-white/10 rounded-lg p-6 sm:p-8 md:p-12 backdrop-blur-sm"
+          className="bg-[#0b0b0b] border border-white/10 rounded-2xl p-4 sm:p-8 md:p-12 backdrop-blur-sm"
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+
+          {/* Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
+
             {clients.map((client, i) => (
               <motion.div
                 key={client.name}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
+                transition={{
+                  duration: 0.4,
+                  delay: i * 0.05,
+                }}
+                whileHover={{
+                  y: -5,
+                }}
                 className="group relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-primary/0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative bg-transparent border border-white/10 rounded-lg p-4 sm:p-6 md:p-8 text-center hover:border-primary/50 hover:bg-white/[0.05] transition-all duration-300 group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.1)] flex items-center justify-center min-h-[150px] sm:min-h-[180px] md:min-h-[200px]">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <img
-                      src={client.logo}
-                      alt={client.name}
-                      className="max-w-full max-h-full object-contain px-2 sm:px-3"
-                    />
-                  </div>
+
+                {/* Glow */}
+                <div className="absolute inset-0 bg-primary/20 blur-xl opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl" />
+
+                {/* Card */}
+                <div
+                  className="
+                    relative
+                    bg-[#111111]
+                    border
+                    border-white/10
+                    rounded-2xl
+                    flex
+                    items-center
+                    justify-center
+                    overflow-hidden
+                    transition-all
+                    duration-500
+                    hover:border-primary/40
+                    hover:bg-[#181818]
+
+                    /* MOBILE HEIGHT */
+                    h-[140px]
+
+                    /* TABLET */
+                    sm:h-[180px]
+
+                    /* DESKTOP */
+                    md:h-[210px]
+                  "
+                >
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+
+                  {/* LOGO */}
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="
+                      relative
+                      z-10
+                      object-contain
+                      transition-all
+                      duration-500
+                      group-hover:scale-110
+
+                      /* MOBILE BIGGER IMAGE */
+                      max-w-[78%]
+                      max-h-[78%]
+
+                      /* TABLET */
+                      sm:max-w-[70%]
+                      sm:max-h-[70%]
+
+                      /* DESKTOP */
+                      md:max-w-[65%]
+                      md:max-h-[65%]
+                    "
+                  />
                 </div>
               </motion.div>
             ))}
           </div>
         </motion.div>
 
+        {/* Bottom */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-center mt-16"
+          className="text-center mt-14"
         >
-          <p className="text-gray-400 text-sm uppercase tracking-[0.2em] mb-4">
+          <p className="text-gray-500 text-xs md:text-sm uppercase tracking-[0.3em] mb-4">
             And many more prestigious brands
           </p>
+
           <div className="flex items-center justify-center gap-2">
             <div className="w-12 h-px bg-gradient-to-r from-transparent to-primary/50" />
             <span className="text-primary text-xs">★</span>
@@ -134,4 +204,5 @@ const Clients = memo(() => {
 });
 
 Clients.displayName = "Clients";
+
 export default Clients;
