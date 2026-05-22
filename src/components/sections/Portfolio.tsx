@@ -9,6 +9,15 @@ import w5 from "@/assets/work-5.jpg";
 import w6 from "@/assets/work-6.jpg";
 import w7 from "@/assets/work-7.jpg";
 import w8 from "@/assets/work-8.jpg";
+import w9 from "@/assets/work-9.jpg";
+import w10 from "@/assets/work-10.jpg";
+import w11 from "@/assets/work-11.jpg";
+import w12 from "@/assets/work-12.jpg";
+import w13 from "@/assets/work-13.jpg";
+import w14 from "@/assets/work-14.jpg";
+import w15 from "@/assets/work-15.jpg";
+import w16 from "@/assets/work-16.jpg";
+import w17 from "@/assets/work-17.jpg";
 
 type Cat = "All" | "Feature Films" | "Short Films" | "Podcasts" | "Music" | "Corporate";
 
@@ -20,7 +29,7 @@ interface Project {
   desc: string;
 }
 
-const imgs = [w1, w2, w3, w4, w5, w6, w7, w8];
+const imgs = [w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15, w16, w17];
 const pick = (i: number) => imgs[i % imgs.length];
 
 const rawProjects: Omit<Project, "img" | "span">[] = [
@@ -46,6 +55,13 @@ const rawProjects: Omit<Project, "img" | "span">[] = [
   { title: "Maharashtra Tourism", category: "Corporate", desc: "Corporate film production for Maharashtra Tourism Department Board." },
   { title: "Symbiosis SSOU", category: "Corporate", desc: "Corporate and documentary film for Symbiosis Skills & Open University, Pune." },
   { title: "Finolex Pipes", category: "Corporate", desc: "Corporate brand film production." },
+  { title: "Dilemma", category: "Short Films", desc: "Dark thriller — Official Selection at Horror Bowl Movie Awards 2021. Multiple festival selections including London Indie Short Festival and Berlin Shorts Award." },
+  { title: "Vasaad: The Cannibal", category: "Short Films", desc: "Atmospheric thriller by Yogesh Baban Gadage, exploring dark psychological themes with stunning cinematography." },
+  { title: "Architecture & Design", category: "Corporate", desc: "Architectural documentation and corporate building photography for institutional clients." },
+  { title: "Weekend", category: "Short Films", desc: "Short film by Arvind Gajanan Joshi featuring ensemble cast drama with nuanced storytelling." },
+  { title: "Paus Uda 2024", category: "Feature Films", desc: "Marathi film production featuring autumn themes and contemporary storytelling." },
+  { title: "Shrimad Bhagavad Gita (Marathi) Vol. 2", category: "Music", desc: "Sacred music production featuring artists Shirish Dinkar Joshi and Anand Dinkar Joshi." },
+  { title: "Gateway of India Photography", category: "Corporate", desc: "Professional location photography and cinematography for tourism and architectural documentation." },
 ];
 
 const projects: Project[] = rawProjects.map((p, i) => ({
