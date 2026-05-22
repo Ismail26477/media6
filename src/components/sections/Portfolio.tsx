@@ -24,14 +24,14 @@ const imgs = [w1, w2, w3, w4, w5, w6, w7, w8];
 const pick = (i: number) => imgs[i % imgs.length];
 
 const rawProjects: Omit<Project, "img" | "span">[] = [
-  { title: "Farzand", category: "Feature Films", desc: "Music production and dubbing for this acclaimed Marathi historical epic." },
-  { title: "Ani Dr. Kashinath Ghanekar", category: "Feature Films", desc: "Complete dubbing post-production for this biographical Marathi blockbuster." },
-  { title: "Basta", category: "Feature Films", desc: "Full audio post production for this Marathi feature film." },
-  { title: "Rajkumar", category: "Feature Films", desc: "Audio post production for this Marathi family drama." },
-  { title: "Sarla Ek Koti", category: "Feature Films", desc: "Audio post production and sound design." },
-  { title: "Raan", category: "Feature Films", desc: "Complete audio post production." },
-  { title: "Lalbaug Chi Rani", category: "Feature Films", desc: "Music production and dubbing." },
-  { title: "Javani Jindabad", category: "Feature Films", desc: "Sound design and foley." },
+  { title: "Bhairav", category: "Feature Films", desc: "Historical drama presented by Swami Samarth Movies and Everest Entertainment." },
+  { title: "Priyatama", category: "Feature Films", desc: "Shubh Vivah wedding drama film production." },
+  { title: "Dr. Kanashthey Bhankar", category: "Feature Films", desc: "Multi-cast drama exploring family dynamics and personal growth." },
+  { title: "Rajkumar", category: "Feature Films", desc: "Period family drama with profound storytelling and cinematography." },
+  { title: "Suraksha Ek Kodi", category: "Feature Films", desc: "Thriller drama presented by Sanvi Productions." },
+  { title: "Raan", category: "Feature Films", desc: "Dark psychological thriller by director Rakesh Sharma for Kahaani Company." },
+  { title: "Jawani Jhijlod", category: "Feature Films", desc: "Romantic drama directed by Shiv Kadam, presenting raw emotions." },
+  { title: "Lolubagchi Rajni", category: "Feature Films", desc: "Comedy film featuring upside-down storytelling and unique humor." },
   { title: "Dilemma", category: "Short Films", desc: "Official Selection — Horror Bowl Movie Awards 2021. Production and post-production." },
   { title: "The Drainage", category: "Short Films", desc: "Award-winning short film — production and post-production." },
   { title: "Weekend", category: "Short Films", desc: "Short film production and post-production." },
