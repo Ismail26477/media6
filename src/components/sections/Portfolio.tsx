@@ -33,35 +33,47 @@ const imgs = [w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15, 
 const pick = (i: number) => imgs[i % imgs.length];
 
 const rawProjects: Omit<Project, "img" | "span">[] = [
-  { title: "Bhairav", category: "Feature Films", desc: "Historical drama presented by Swami Samarth Movies and Everest Entertainment." },
-  { title: "Priyatama", category: "Feature Films", desc: "Shubh Vivah wedding drama film production." },
-  { title: "Dr. Kanashthey Bhankar", category: "Feature Films", desc: "Multi-cast drama exploring family dynamics and personal growth." },
-  { title: "Rajkumar", category: "Feature Films", desc: "Period family drama with profound storytelling and cinematography." },
-  { title: "Suraksha Ek Kodi", category: "Feature Films", desc: "Thriller drama presented by Sanvi Productions." },
-  { title: "Raan", category: "Feature Films", desc: "Dark psychological thriller by director Rakesh Sharma for Kahaani Company." },
-  { title: "Jawani Jhijlod", category: "Feature Films", desc: "Romantic drama directed by Shiv Kadam, presenting raw emotions." },
-  { title: "Lolubagchi Rajni", category: "Feature Films", desc: "Comedy film featuring upside-down storytelling and unique humor." },
-  { title: "Dilemma", category: "Short Films", desc: "Official Selection — Horror Bowl Movie Awards 2021. Production and post-production." },
-  { title: "The Drainage", category: "Short Films", desc: "Award-winning short film — production and post-production." },
+  // Feature Films
+  { title: "Sarla Ek Koti", category: "Feature Films", desc: "Complete audio post-production and music production." },
+  { title: "Gadad Andhar", category: "Feature Films", desc: "Full dubbing post-production for this acclaimed Marathi feature." },
+  { title: "Basta", category: "Feature Films", desc: "Full audio post production for this Marathi feature film." },
+  { title: "Farzand", category: "Feature Films", desc: "Music production and dubbing for this acclaimed Marathi historical epic." },
+  { title: "Ani Dr. Kashinath Ghanekar", category: "Feature Films", desc: "Complete dubbing post-production for this biographical Marathi blockbuster." },
+  { title: "Rajkumar", category: "Feature Films", desc: "Audio post production for this Marathi family drama." },
+
+  // Award-Winning Short Films
+  { title: "The Drainage", category: "Short Films", desc: "Award-winning short film — production and complete post-production." },
   { title: "Weekend", category: "Short Films", desc: "Short film production and post-production." },
-  { title: "Vashat — The Cannibal", category: "Short Films", desc: "Short film post-production." },
+  { title: "Dilemma", category: "Short Films", desc: "Official Selection — Horror Bowl Movie Awards 2021. Multiple festival selections including London Indie Short Festival and Berlin Shorts Award." },
+  { title: "Vashat", category: "Short Films", desc: "Short film post-production." },
+  { title: "Na Jaane Kyon", category: "Short Films", desc: "Award-winning short film production and post-production." },
+
+  // Podcasts
   { title: "+91 Podcast", category: "Podcasts", desc: "Full podcast production available on Snovel's web portal." },
   { title: "Charging Point", category: "Podcasts", desc: "Podcast production and audio engineering. Available on Snovel." },
   { title: "Screen Time", category: "Podcasts", desc: "Podcast production and distribution. Available on Snovel." },
+
+  // Music Albums
   { title: "Khakee Gulab: Ek Rasrang", category: "Music", desc: "Full music album production and recording." },
   { title: "Khakee Gulab: Ek Bhakti Sugandh", category: "Music", desc: "Devotional music album — production and recording." },
-  { title: "Tujha Ek Themb", category: "Music", desc: "Music album featuring dubbing by Mahalaxmi Iyer." },
-  { title: "Srimad Bhagavatgeeta", category: "Music", desc: "Sacred music album — full production." },
-  { title: "Maharashtra Tourism", category: "Corporate", desc: "Corporate film production for Maharashtra Tourism Department Board." },
-  { title: "Symbiosis SSOU", category: "Corporate", desc: "Corporate and documentary film for Symbiosis Skills & Open University, Pune." },
+  { title: "Jhep", category: "Music", desc: "Music album production and audio engineering." },
+  { title: "Sukhachi Thev", category: "Music", desc: "Music album — full production and recording." },
+  { title: "Tujha Ek Themb", category: "Music", desc: "Music album featuring dubbing and production." },
+  { title: "Bhakti Vedant Book Trust Audio Book", category: "Music", desc: "Sacred audio book production and narration." },
+
+  // Corporate Films
+  { title: "Symbiosis SSOU", category: "Corporate", desc: "Corporate and documentary film for Symbiosis Skills & Professional University, Pune." },
   { title: "Finolex Pipes", category: "Corporate", desc: "Corporate brand film production." },
-  { title: "Dilemma", category: "Short Films", desc: "Dark thriller — Official Selection at Horror Bowl Movie Awards 2021. Multiple festival selections including London Indie Short Festival and Berlin Shorts Award." },
-  { title: "Vasaad: The Cannibal", category: "Short Films", desc: "Atmospheric thriller by Yogesh Baban Gadage, exploring dark psychological themes with stunning cinematography." },
-  { title: "Architecture & Design", category: "Corporate", desc: "Architectural documentation and corporate building photography for institutional clients." },
-  { title: "Weekend", category: "Short Films", desc: "Short film by Arvind Gajanan Joshi featuring ensemble cast drama with nuanced storytelling." },
-  { title: "Paus Uda 2024", category: "Feature Films", desc: "Marathi film production featuring autumn themes and contemporary storytelling." },
-  { title: "Shrimad Bhagavad Gita (Marathi) Vol. 2", category: "Music", desc: "Sacred music production featuring artists Shirish Dinkar Joshi and Anand Dinkar Joshi." },
-  { title: "Gateway of India Photography", category: "Corporate", desc: "Professional location photography and cinematography for tourism and architectural documentation." },
+  { title: "Teradata India", category: "Corporate", desc: "Corporate film production and post-production." },
+  { title: "AppDirect India", category: "Corporate", desc: "Corporate film production." },
+  { title: "Maharashtra Tourism", category: "Corporate", desc: "Corporate film for Maharashtra Tourism Department Board." },
+  { title: "Maharashtra Government", category: "Corporate", desc: "Government film production and post-production." },
+  { title: "Nanded Waghala", category: "Corporate", desc: "Corporate film for Nanded Waghala Municipal Corporation." },
+  { title: "Gurukul Public School", category: "Corporate", desc: "School documentary and corporate film production." },
+  { title: "Snovel", category: "Corporate", desc: "Corporate film and platform production." },
+  { title: "Audible", category: "Corporate", desc: "Corporate content and audio production." },
+  { title: "Rhyfil", category: "Corporate", desc: "Corporate film production." },
+  { title: "Zee Music Marathi", category: "Corporate", desc: "Music production for Zee Music Marathi." },
 ];
 
 const projects: Project[] = rawProjects.map((p, i) => ({
