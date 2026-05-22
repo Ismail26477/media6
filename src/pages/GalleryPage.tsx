@@ -37,44 +37,44 @@ const photos = [
 
 const films = [
   {
-    title: "PPMS",
+    title: "Jai Bhim",
     poster:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-nEJQz7Abl6crUGaVsmgqiD6P6Nzxke.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-GKIHJtOKOs7YSYTbQ5QnK4gSw1dfXq.png",
   },
   {
-    title: "Raya",
+    title: "Kal Ho Naa Ho",
     poster:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jnFJbd0rk0sXqiglRTlzkmmUdYtwHl.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-1i8v2LOkhXbhMOSoEbpoe5OHxi15oN.png",
   },
   {
-    title: "Rajkumari",
+    title: "Raan",
     poster:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-W121DO7JA8DHdlLUJRZkprYCMlDBsc.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-uYPxIG7Sd3IkrvMoRLvxXWdzZRiE4d.png",
   },
   {
-    title: "Udaharnarth Nemade",
+    title: "Surkalota Ek Kodi",
     poster:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7jkxgW0CLuWN2OfLLyQT3G3apY4tKC.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mN90d4iVXZnxT7F1lXSsqYFe0hJcpV.png",
   },
   {
-    title: "Kshatriya",
+    title: "Rajkumar",
     poster:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-DDTfRO4PX9PS97AeaMjo9Mc11ar4IV.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-U5C4JE3auEcNz8BSuhWDBbDDPkbaEb.png",
   },
   {
-    title: "Erbai",
+    title: "Lalbaug Chi Rani",
     poster:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-bT3u2h5qQdOPHUwILYspG8Sp2DWN7j.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-05-22%20at%2012.14.42%20PM-Y6ozbopi5u9tk9r9UdTVjfFcZLr27C.jpeg",
   },
   {
-    title: "Asahi Prakda Chaat",
+    title: "Prem",
     poster:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-SYalzyB7L4SvLdxGCOQCG8LvDzfs6E.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Q3bZRZB4A8WJ7PbXU7TsnhNzWCEda8.png",
   },
   {
-    title: "Ek Karachya Bhankarkaa",
+    title: "Raan (Alternate)",
     poster:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-KFYLjB6k2JdreyTRVfPJwT8mSqRe8V.png",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dH6GblaB1J6DF1h8kIScYG7Keu9MWu.png",
   },
 ];
 
